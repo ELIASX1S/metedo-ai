@@ -1,0 +1,1587 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MÉTODO IA RENDA - Ganhe Dinheiro com Inteligência Artificial</title>
+  <meta name="description" content="Descubra como usar Inteligência Artificial para criar fontes reais de renda online, mesmo começando do zero. Método passo a passo com 128 páginas.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #0a0e1a;
+      color: #e0e0e0;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ===== UTILITY ===== */
+    .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+    .container-wide { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    .text-center { text-align: center; }
+    .text-gold { color: #FFD700; }
+    .text-white { color: #ffffff; }
+    .text-muted { color: #8a8fa8; }
+    .mt-1 { margin-top: 8px; }
+    .mt-2 { margin-top: 16px; }
+    .mt-3 { margin-top: 24px; }
+    .mt-4 { margin-top: 32px; }
+    .mt-5 { margin-top: 48px; }
+    .mb-2 { margin-bottom: 16px; }
+    .mb-3 { margin-bottom: 24px; }
+    .mb-4 { margin-bottom: 32px; }
+
+    /* ===== TYPOGRAPHY ===== */
+    .headline-xl {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 900;
+      line-height: 1.15;
+      color: #ffffff;
+    }
+    .headline-lg {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 4vw, 2.8rem);
+      font-weight: 800;
+      line-height: 1.2;
+      color: #ffffff;
+    }
+    .headline-md {
+      font-size: clamp(1.2rem, 3vw, 1.8rem);
+      font-weight: 700;
+      line-height: 1.3;
+      color: #ffffff;
+    }
+    .subheadline {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      font-weight: 400;
+      color: #b0b8d1;
+      line-height: 1.6;
+    }
+    .label-tag {
+      display: inline-block;
+      background: linear-gradient(135deg, #FFD700, #FFA500);
+      color: #0a0e1a;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 6px 18px;
+      border-radius: 50px;
+      margin-bottom: 16px;
+    }
+
+    /* ===== FLOATING TOP BAR ===== */
+    .top-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(10, 14, 26, 0.92);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255, 215, 0, 0.15);
+      padding: 10px 0;
+      transform: translateY(-100%);
+      transition: transform 0.4s ease;
+    }
+    .top-bar.visible { transform: translateY(0); }
+    .top-bar-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .top-bar-logo {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: 1.1rem;
+      color: #fff;
+    }
+    .top-bar-logo span { color: #FFD700; }
+    .top-bar-btn {
+      background: linear-gradient(135deg, #FFD700, #FFA500);
+      color: #0a0e1a;
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 8px 24px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .top-bar-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 20px rgba(255, 215, 0, 0.4);
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      position: relative;
+      padding: 100px 0 80px;
+      background: linear-gradient(180deg, #0a0e1a 0%, #0d1530 40%, #111d45 100%);
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(ellipse at 30% 20%, rgba(30, 60, 180, 0.12) 0%, transparent 60%),
+                  radial-gradient(ellipse at 70% 80%, rgba(255, 215, 0, 0.06) 0%, transparent 50%);
+      animation: heroGlow 8s ease-in-out infinite alternate;
+    }
+    @keyframes heroGlow {
+      0% { opacity: 0.6; transform: scale(1); }
+      100% { opacity: 1; transform: scale(1.05); }
+    }
+    .hero-grid {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .hero-text .pre-headline {
+      color: #FFD700;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .hero-text .headline-xl span {
+      background: linear-gradient(135deg, #FFD700, #FFA500);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-text .hero-desc {
+      font-size: 1.1rem;
+      color: #b0b8d1;
+      margin-top: 20px;
+      line-height: 1.7;
+    }
+    .hero-text .hero-desc strong { color: #ffffff; }
+    .hero-badges {
+      display: flex;
+      gap: 12px;
+      margin-top: 24px;
+      flex-wrap: wrap;
+    }
+    .hero-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 50px;
+      padding: 8px 16px;
+      font-size: 0.85rem;
+      color: #d0d5e8;
+    }
+    .hero-badge .icon { font-size: 1.1rem; }
+    .hero-image { text-align: center; }
+    .hero-image img {
+      border-radius: 12px;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5), 0 0 60px rgba(30, 60, 180, 0.15);
+      margin: 0 auto;
+    }
+
+    /* ===== CTA BUTTON ===== */
+    .cta-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #FFD700, #FFA500, #FFD700);
+      background-size: 200% 200%;
+      color: #0a0e1a;
+      font-weight: 800;
+      font-size: 1.15rem;
+      padding: 18px 48px;
+      border-radius: 60px;
+      border: none;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      transition: all 0.4s ease;
+      box-shadow: 0 8px 30px rgba(255, 215, 0, 0.3);
+      animation: ctaShine 3s ease-in-out infinite;
+      text-align: center;
+    }
+    @keyframes ctaShine {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+    .cta-btn:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 12px 40px rgba(255, 215, 0, 0.5);
+    }
+    .cta-btn-sub {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 500;
+      margin-top: 4px;
+      letter-spacing: 0;
+      text-transform: none;
+      opacity: 0.8;
+    }
+    .cta-section {
+      text-align: center;
+      padding: 48px 0;
+    }
+    .cta-safe {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      margin-top: 16px;
+      font-size: 0.8rem;
+      color: #8a8fa8;
+    }
+    .cta-safe svg { width: 16px; height: 16px; fill: #4CAF50; }
+
+    /* ===== SOCIAL PROOF BAR ===== */
+    .proof-bar {
+      background: linear-gradient(135deg, #FFD700, #FFA500);
+      padding: 16px 0;
+      text-align: center;
+    }
+    .proof-bar-inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      color: #0a0e1a;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+    .proof-item { display: flex; align-items: center; gap: 8px; }
+    .proof-item .num { font-size: 1.3rem; font-weight: 900; }
+
+    /* ===== PAIN SECTION ===== */
+    .pain-section {
+      padding: 80px 0;
+      background: linear-gradient(180deg, #111d45 0%, #0d1530 100%);
+    }
+    .pain-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .pain-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 16px;
+      padding: 32px 28px;
+      transition: all 0.3s ease;
+    }
+    .pain-card:hover {
+      border-color: rgba(255, 70, 70, 0.3);
+      background: rgba(255, 70, 70, 0.03);
+      transform: translateY(-4px);
+    }
+    .pain-card .icon {
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+    .pain-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+    .pain-card p {
+      font-size: 0.95rem;
+      color: #8a8fa8;
+      line-height: 1.6;
+    }
+
+    /* ===== SOLUTION / WHAT IS ===== */
+    .solution-section {
+      padding: 80px 0;
+      background: linear-gradient(180deg, #0d1530 0%, #0a1228 100%);
+    }
+    .solution-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      margin-top: 40px;
+    }
+    .solution-list { list-style: none; }
+    .solution-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .solution-list li:last-child { border-bottom: none; }
+    .solution-check {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      background: linear-gradient(135deg, #FFD700, #FFA500);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      color: #0a0e1a;
+      font-weight: 700;
+      margin-top: 2px;
+    }
+    .solution-list li strong { color: #ffffff; }
+
+    /* ===== MODULES SECTION ===== */
+    .modules-section {
+      padding: 80px 0;
+      background: linear-gradient(180deg, #0a1228 0%, #0d1530 50%, #111d45 100%);
+    }
+    .module-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 40px 36px;
+      margin-bottom: 24px;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .module-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(180deg, #FFD700, #FFA500);
+      border-radius: 4px 0 0 4px;
+    }
+    .module-card:hover {
+      border-color: rgba(255, 215, 0, 0.2);
+      background: rgba(255, 255, 255, 0.05);
+      transform: translateX(6px);
+    }
+    .module-num {
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #FFD700;
+      margin-bottom: 8px;
+    }
+    .module-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 12px;
+    }
+    .module-card p {
+      color: #b0b8d1;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+    .module-topics {
+      list-style: none;
+      margin-top: 16px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .module-topics li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+      color: #d0d5e8;
+    }
+    .module-topics li::before {
+      content: '>';
+      color: #FFD700;
+      font-weight: 700;
+      font-size: 0.8rem;
+    }
+
+    /* ===== BONUS SECTION ===== */
+    .bonus-section {
+      padding: 80px 0;
+      background: linear-gradient(180deg, #111d45 0%, #0d1530 100%);
+      position: relative;
+    }
+    .bonus-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(255, 215, 0, 0.05) 0%, transparent 60%);
+    }
+    .bonus-image-wrapper {
+      text-align: center;
+      margin: 40px 0;
+      position: relative;
+      z-index: 2;
+    }
+    .bonus-image-wrapper img {
+      border-radius: 16px;
+      margin: 0 auto;
+      max-width: 700px;
+    }
+    .bonus-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 32px;
+      position: relative;
+      z-index: 2;
+    }
+    .bonus-card {
+      background: linear-gradient(135deg, rgba(255, 215, 0, 0.06), rgba(255, 165, 0, 0.03));
+      border: 1px solid rgba(255, 215, 0, 0.15);
+      border-radius: 16px;
+      padding: 28px 24px;
+      transition: all 0.3s ease;
+    }
+    .bonus-card:hover {
+      border-color: rgba(255, 215, 0, 0.4);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(255, 215, 0, 0.1);
+    }
+    .bonus-tag {
+      display: inline-block;
+      background: linear-gradient(135deg, #FFD700, #FFA500);
+      color: #0a0e1a;
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 50px;
+      margin-bottom: 12px;
+    }
+    .bonus-card h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+    .bonus-card p {
+      font-size: 0.9rem;
+      color: #8a8fa8;
+      line-height: 1.6;
+    }
+    .bonus-value {
+      margin-top: 12px;
+      font-size: 0.85rem;
+      color: #FFD700;
+      font-weight: 600;
+    }
+    .bonus-value s { color: #666; font-weight: 400; }
+
+    /* ===== FOR WHO SECTION ===== */
+    .forwho-section {
+      padding: 80px 0;
+      background: linear-gradient(180deg, #0d1530 0%, #0a1228 100%);
+    }
+    .forwho-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      margin-top: 40px;
+    }
+    .forwho-list { list-style: none; }
+    .forwho-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 12px 0;
+      font-size: 1rem;
+      color: #d0d5e8;
+      line-height: 1.5;
+    }
+    .forwho-list .icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 2px; }
+    .forwho-yes .icon { color: #4CAF50; }
+    .forwho-no .icon { color: #ff4444; }
+
+    /* ===== TESTIMONIALS ===== */
+    .testimonials-section {
+      padding: 80px 0;
+      background: linear-gradient(180deg, #0a1228 0%, #0d1530 100%);
+    }
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .testimonial-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 28px;
+      transition: all 0.3s ease;
+    }
+    .testimonial-card:hover {
+      border-color: rgba(255, 215, 0, 0.2);
+      transform: translateY(-4px);
+    }
+    .testimonial-stars {
+      color: #FFD700;
+      font-size: 1.1rem;
+      margin-bottom: 14px;
+      letter-spacing: 2px;
+    }
+    .testimonial-text {
+      font-size: 0.95rem;
+      color: #b0b8d1;
+      line-height: 1.7;
+      font-style: italic;
+      margin-bottom: 16px;
+    }
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .testimonial-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #1e3cb8, #FFD700);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #fff;
+    }
+    .testimonial-name {
+      font-weight: 600;
+      color: #ffffff;
+      font-size: 0.95rem;
+    }
+    .testimonial-role {
+      font-size: 0.8rem;
+      color: #8a8fa8;
+    }
+
+    /* ===== PRICING SECTION ===== */
+    .pricing-section {
+      padding: 80px 0;
+      background: linear-gradient(180deg, #0d1530 0%, #111d45 50%, #0d1530 100%);
+      position: relative;
+    }
+    .pricing-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(ellipse at 50% 50%, rgba(255, 215, 0, 0.04) 0%, transparent 60%);
+    }
+    .pricing-card {
+      max-width: 580px;
+      margin: 40px auto 0;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+      border: 2px solid rgba(255, 215, 0, 0.25);
+      border-radius: 24px;
+      padding: 48px 40px;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 0 80px rgba(255, 215, 0, 0.05);
+    }
+    .pricing-badge {
+      position: absolute;
+      top: -16px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(135deg, #ff4444, #cc0000);
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 8px 24px;
+      border-radius: 50px;
+      white-space: nowrap;
+    }
+    .pricing-original {
+      font-size: 1.1rem;
+      color: #666;
+      margin-top: 20px;
+    }
+    .pricing-original s { font-size: 1.3rem; }
+    .pricing-current {
+      margin-top: 8px;
+    }
+    .pricing-current .currency {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #FFD700;
+      vertical-align: super;
+    }
+    .pricing-current .amount {
+      font-size: 4.5rem;
+      font-weight: 900;
+      color: #FFD700;
+      line-height: 1;
+      font-family: 'Playfair Display', serif;
+    }
+    .pricing-installment {
+      font-size: 1rem;
+      color: #b0b8d1;
+      margin-top: 8px;
+    }
+    .pricing-includes {
+      list-style: none;
+      text-align: left;
+      margin-top: 32px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .pricing-includes li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 8px 0;
+      font-size: 0.95rem;
+      color: #d0d5e8;
+    }
+    .pricing-includes .check {
+      color: #4CAF50;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    /* ===== GUARANTEE SECTION ===== */
+    .guarantee-section {
+      padding: 80px 0;
+      background: linear-gradient(180deg, #0d1530 0%, #0a1228 100%);
+    }
+    .guarantee-grid {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 40px;
+      align-items: center;
+      max-width: 800px;
+      margin: 40px auto 0;
+    }
+    .guarantee-badge-img {
+      width: 200px;
+    }
+    .guarantee-text h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: #FFD700;
+      margin-bottom: 12px;
+    }
+    .guarantee-text p {
+      font-size: 1rem;
+      color: #b0b8d1;
+      line-height: 1.7;
+    }
+
+    /* ===== FAQ SECTION ===== */
+    .faq-section {
+      padding: 80px 0;
+      background: linear-gradient(180deg, #0a1228 0%, #0d1530 100%);
+    }
+    .faq-list {
+      max-width: 720px;
+      margin: 40px auto 0;
+    }
+    .faq-item {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      color: #ffffff;
+      font-size: 1.05rem;
+      font-weight: 600;
+      text-align: left;
+      padding: 20px 0;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Inter', sans-serif;
+      transition: color 0.3s ease;
+    }
+    .faq-question:hover { color: #FFD700; }
+    .faq-arrow {
+      font-size: 1.5rem;
+      transition: transform 0.3s ease;
+      color: #FFD700;
+      flex-shrink: 0;
+      margin-left: 16px;
+    }
+    .faq-item.active .faq-arrow { transform: rotate(45deg); }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+    }
+    .faq-item.active .faq-answer {
+      max-height: 300px;
+      padding-bottom: 20px;
+    }
+    .faq-answer p {
+      font-size: 0.95rem;
+      color: #8a8fa8;
+      line-height: 1.7;
+    }
+
+    /* ===== URGENCY BAR ===== */
+    .urgency-bar {
+      background: linear-gradient(135deg, #cc0000, #ff4444);
+      padding: 14px 0;
+      text-align: center;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+    .urgency-bar span { color: #FFD700; }
+
+    /* ===== FINAL CTA ===== */
+    .final-cta {
+      padding: 100px 0;
+      background: linear-gradient(180deg, #0d1530 0%, #0a0e1a 100%);
+      text-align: center;
+      position: relative;
+    }
+    .final-cta::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(ellipse at 50% 50%, rgba(255, 215, 0, 0.05) 0%, transparent 60%);
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      padding: 40px 0;
+      background: #060a14;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .footer p {
+      font-size: 0.8rem;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    /* ===== COUNTER ANIMATION ===== */
+    .counter-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .counter-box {
+      text-align: center;
+      padding: 24px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 16px;
+    }
+    .counter-num {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: #FFD700;
+      font-family: 'Playfair Display', serif;
+    }
+    .counter-label {
+      font-size: 0.85rem;
+      color: #8a8fa8;
+      margin-top: 4px;
+    }
+
+    /* ===== VALUE STACK ===== */
+    .value-stack {
+      max-width: 600px;
+      margin: 40px auto 0;
+    }
+    .value-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .value-item-name {
+      font-size: 1rem;
+      color: #d0d5e8;
+    }
+    .value-item-price {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #FFD700;
+    }
+    .value-total {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      border-top: 2px solid rgba(255, 215, 0, 0.3);
+      margin-top: 8px;
+    }
+    .value-total-label {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+    .value-total-price {
+      font-size: 1.3rem;
+      font-weight: 900;
+      color: #FFD700;
+    }
+    .value-pay {
+      text-align: center;
+      margin-top: 24px;
+      padding: 20px;
+      background: rgba(255, 215, 0, 0.05);
+      border: 1px dashed rgba(255, 215, 0, 0.3);
+      border-radius: 12px;
+    }
+    .value-pay-label {
+      font-size: 0.9rem;
+      color: #8a8fa8;
+    }
+    .value-pay-price {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: #4CAF50;
+      font-family: 'Playfair Display', serif;
+    }
+
+    /* ===== DIVIDER ===== */
+    .gold-divider {
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(135deg, #FFD700, #FFA500);
+      margin: 16px auto;
+      border-radius: 3px;
+    }
+
+    /* ===== SCROLL ANIMATIONS ===== */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .hero-grid { grid-template-columns: 1fr; text-align: center; }
+      .hero-image { order: -1; }
+      .hero-image img { max-width: 90%; }
+      .hero-badges { justify-content: center; }
+      .solution-grid { grid-template-columns: 1fr; }
+      .bonus-grid { grid-template-columns: 1fr; }
+      .forwho-grid { grid-template-columns: 1fr; }
+      .module-topics { grid-template-columns: 1fr; }
+      .guarantee-grid { grid-template-columns: 1fr; text-align: center; }
+      .guarantee-badge-img { margin: 0 auto; }
+      .counter-row { grid-template-columns: 1fr; }
+      .proof-bar-inner { gap: 20px; font-size: 0.8rem; }
+      .pricing-card { padding: 36px 24px; }
+      .pricing-current .amount { font-size: 3.5rem; }
+      .top-bar-logo { font-size: 0.9rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== FLOATING TOP BAR ===== -->
+  <div class="top-bar" id="topBar">
+    <div class="top-bar-inner">
+      <div class="top-bar-logo">METODO <span>IA RENDA</span></div>
+      <a href="#comprar" class="top-bar-btn">QUERO GARANTIR O MEU</a>
+    </div>
+  </div>
+
+  <!-- ===== URGENCY BAR ===== -->
+  <div class="urgency-bar">
+    <div class="container">
+      OFERTA DE LANCAMENTO &mdash; Preco promocional por <span>tempo limitado</span>. Apos o encerramento, o valor volta ao normal.
+    </div>
+  </div>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero">
+    <div class="container-wide">
+      <div class="hero-grid">
+        <div class="hero-text">
+          <div class="pre-headline">NOVO METODO 2026</div>
+          <h1 class="headline-xl">
+            Descubra Como Usar <span>Inteligencia Artificial</span> Para Criar Fontes Reais de Renda Online
+          </h1>
+          <p class="hero-desc">
+            Mesmo que voce <strong>nunca tenha vendido nada na internet</strong>, nao entenda de tecnologia e esteja comecando <strong>completamente do zero</strong>. O metodo passo a passo com 128 paginas que ja esta transformando iniciantes em empreendedores digitais.
+          </p>
+          <div class="hero-badges">
+            <div class="hero-badge"><span class="icon">&#128214;</span> 128 paginas</div>
+            <div class="hero-badge"><span class="icon">&#127919;</span> 5 Modulos</div>
+            <div class="hero-badge"><span class="icon">&#127873;</span> 4 Bonus</div>
+            <div class="hero-badge"><span class="icon">&#128274;</span> Acesso Imediato</div>
+          </div>
+          <div style="margin-top: 32px;">
+            <a href="#comprar" class="cta-btn">
+              QUERO COMECAR AGORA
+              <span class="cta-btn-sub">Acesso imediato apos a confirmacao</span>
+            </a>
+          </div>
+          <div class="cta-safe">
+            <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+            Compra 100% segura &bull; Garantia de 7 dias &bull; Pagamento via Hotmart
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="mockup_ebook_web.jpg" alt="Metodo IA Renda - E-book Premium" loading="eager">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SOCIAL PROOF BAR ===== -->
+  <div class="proof-bar">
+    <div class="proof-bar-inner">
+      <div class="proof-item"><span class="num">2.847+</span> copias vendidas</div>
+      <div class="proof-item">&#11088;&#11088;&#11088;&#11088;&#11088; <span>4.9/5 de avaliacao</span></div>
+      <div class="proof-item"><span class="num">128</span> paginas de conteudo</div>
+    </div>
+  </div>
+
+  <!-- ===== PAIN SECTION ===== -->
+  <section class="pain-section">
+    <div class="container">
+      <div class="text-center fade-up">
+        <span class="label-tag">Voce se identifica?</span>
+        <h2 class="headline-lg mt-2">Se voce esta sentindo isso, <br>este e-book foi feito para voce</h2>
+      </div>
+      <div class="pain-grid fade-up">
+        <div class="pain-card">
+          <div class="icon">&#128553;</div>
+          <h3>Cansado de tentar e nao conseguir</h3>
+          <p>Ja tentou varias formas de ganhar dinheiro online, mas nenhuma funcionou de verdade. Sente que esta sempre recomeçando do zero.</p>
+        </div>
+        <div class="pain-card">
+          <div class="icon">&#128560;</div>
+          <h3>Perdido com tanta informacao</h3>
+          <p>Assiste dezenas de videos no YouTube, segue varios "gurus", mas nao sabe por onde comecar. Informacao demais, resultado de menos.</p>
+        </div>
+        <div class="pain-card">
+          <div class="icon">&#128176;</div>
+          <h3>Precisa de renda extra urgente</h3>
+          <p>O salario nao esta dando conta. Precisa de uma fonte de renda adicional, mas nao tem capital para investir em negocios tradicionais.</p>
+        </div>
+        <div class="pain-card">
+          <div class="icon">&#129302;</div>
+          <h3>Ve a IA crescendo e nao sabe como usar</h3>
+          <p>Sabe que a Inteligencia Artificial esta mudando tudo, mas nao faz ideia de como transformar isso em dinheiro real no seu bolso.</p>
+        </div>
+        <div class="pain-card">
+          <div class="icon">&#128187;</div>
+          <h3>Acha que precisa ser expert em tecnologia</h3>
+          <p>Acredita que para ganhar dinheiro com IA precisa saber programar ou ter formacao tecnica. Spoiler: nao precisa.</p>
+        </div>
+        <div class="pain-card">
+          <div class="icon">&#9200;</div>
+          <h3>Tem medo de perder a oportunidade</h3>
+          <p>Sente que o trem esta passando e que, se nao agir agora, vai ficar para tras enquanto outros lucram com a IA.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SOLUTION SECTION ===== -->
+  <section class="solution-section">
+    <div class="container">
+      <div class="text-center fade-up">
+        <span class="label-tag">A Solucao</span>
+        <h2 class="headline-lg mt-2">Apresentamos o <span class="text-gold">Metodo IA Renda</span></h2>
+        <p class="subheadline mt-2">O guia definitivo de 128 paginas que transforma qualquer iniciante em um empreendedor digital usando Inteligencia Artificial.</p>
+      </div>
+      <div class="solution-grid fade-up">
+        <div>
+          <img src="capa_web.jpg" alt="Capa do Metodo IA Renda" style="border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.4); max-width: 350px; margin: 0 auto;">
+        </div>
+        <div>
+          <ul class="solution-list">
+            <li>
+              <span class="solution-check">&#10003;</span>
+              <div><strong>Metodo passo a passo</strong> &mdash; Nao e teoria. E um plano de acao com cronograma de 30 dias para voce executar e ver resultados.</div>
+            </li>
+            <li>
+              <span class="solution-check">&#10003;</span>
+              <div><strong>3 modelos de negocio comprovados</strong> &mdash; Produtos digitais, conteudo monetizado e servicos. Escolha o que faz mais sentido para voce.</div>
+            </li>
+            <li>
+              <span class="solution-check">&#10003;</span>
+              <div><strong>Zero experiencia necessaria</strong> &mdash; Criado para quem nunca vendeu nada online. Linguagem simples, sem jargoes tecnicos.</div>
+            </li>
+            <li>
+              <span class="solution-check">&#10003;</span>
+              <div><strong>Funciona com celular ou computador</strong> &mdash; Voce nao precisa de equipamentos caros. Um smartphone e conexao com internet bastam.</div>
+            </li>
+            <li>
+              <span class="solution-check">&#10003;</span>
+              <div><strong>Ferramentas gratuitas</strong> &mdash; Todas as ferramentas de IA indicadas no metodo possuem versoes gratuitas. Investimento zero para comecar.</div>
+            </li>
+            <li>
+              <span class="solution-check">&#10003;</span>
+              <div><strong>Bonus exclusivos</strong> &mdash; 50 prompts prontos, 20 ideias de produtos, checklist e templates de Instagram inclusos.</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NUMBERS ===== -->
+  <section style="padding: 60px 0; background: linear-gradient(180deg, #0a1228 0%, #0d1530 100%);">
+    <div class="container">
+      <div class="counter-row fade-up">
+        <div class="counter-box">
+          <div class="counter-num" data-target="128">0</div>
+          <div class="counter-label">Paginas de conteudo premium</div>
+        </div>
+        <div class="counter-box">
+          <div class="counter-num" data-target="50">0</div>
+          <div class="counter-label">Prompts prontos para usar</div>
+        </div>
+        <div class="counter-box">
+          <div class="counter-num" data-target="30">0</div>
+          <div class="counter-label">Dias de plano de acao</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FIRST CTA ===== -->
+  <section class="cta-section" style="background: linear-gradient(180deg, #0d1530, #111d45);">
+    <div class="container fade-up">
+      <h2 class="headline-md">Pronto para comecar a lucrar com IA?</h2>
+      <p class="subheadline mt-2">Junte-se a mais de 2.800 alunos que ja estao aplicando o metodo.</p>
+      <div class="mt-4">
+        <a href="#comprar" class="cta-btn">QUERO MEU ACESSO AGORA</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MODULES SECTION ===== -->
+  <section class="modules-section">
+    <div class="container">
+      <div class="text-center fade-up">
+        <span class="label-tag">Conteudo Completo</span>
+        <h2 class="headline-lg mt-2">O Que Voce Vai Aprender</h2>
+        <div class="gold-divider"></div>
+        <p class="subheadline mt-2">5 modulos estrategicos + 4 bonus exclusivos para voce sair do zero e comecar a faturar com IA.</p>
+      </div>
+
+      <div class="mt-5 fade-up">
+        <div class="module-card">
+          <div class="module-num">Modulo 1</div>
+          <h3>A Nova Economia da Inteligencia Artificial</h3>
+          <p>Entenda por que 2026 e o ano mais importante para quem quer construir renda online com IA. Descubra a oportunidade que a maioria esta ignorando e o erro fatal que impede 90% das pessoas de lucrar.</p>
+          <ul class="module-topics">
+            <li>A oportunidade de 2026</li>
+            <li>Por que a IA cria novas rendas</li>
+            <li>O erro da maioria</li>
+            <li>Mindset do empreendedor IA</li>
+          </ul>
+        </div>
+
+        <div class="module-card">
+          <div class="module-num">Modulo 2</div>
+          <h3>3 Modelos Reais Para Ganhar Dinheiro com IA</h3>
+          <p>Conheca os 3 caminhos comprovados para monetizar a IA: criar e vender produtos digitais, criar conteudo monetizado e prestar servicos. Com exemplos reais, numeros e analise detalhada de cada modelo.</p>
+          <ul class="module-topics">
+            <li>Produtos digitais com IA</li>
+            <li>Conteudo monetizado</li>
+            <li>Servicos usando IA</li>
+            <li>Qual modelo escolher</li>
+          </ul>
+        </div>
+
+        <div class="module-card">
+          <div class="module-num">Modulo 3</div>
+          <h3>Como Criar Seu Primeiro Produto Digital com ChatGPT</h3>
+          <p>O passo a passo completo para criar um produto digital do zero usando IA. Da escolha do nicho ate a publicacao na plataforma de vendas. Voce vai sair deste modulo com um produto pronto.</p>
+          <ul class="module-topics">
+            <li>Escolha do nicho lucrativo</li>
+            <li>Criacao com ChatGPT</li>
+            <li>Design no Canva</li>
+            <li>Publicacao e precificacao</li>
+          </ul>
+        </div>
+
+        <div class="module-card">
+          <div class="module-num">Modulo 4</div>
+          <h3>Como Vender Usando Instagram</h3>
+          <p>Transforme seu Instagram em uma maquina de vendas. Aprenda a criar Reels que viralizam, montar um funil simples que converte e usar o link na bio de forma estrategica para gerar vendas todos os dias.</p>
+          <ul class="module-topics">
+            <li>Reels que viralizam</li>
+            <li>Funil simples de vendas</li>
+            <li>Link na bio estrategico</li>
+            <li>Tecnicas de conversao</li>
+          </ul>
+        </div>
+
+        <div class="module-card">
+          <div class="module-num">Modulo 5</div>
+          <h3>Plano de Execucao 30 Dias</h3>
+          <p>Cronograma diario detalhado para voce executar tudo o que aprendeu. Dia a dia, semana a semana. Sem achismo, sem improvisacao. Siga o plano e veja os resultados aparecerem.</p>
+          <ul class="module-topics">
+            <li>Semana 1: Fundacao</li>
+            <li>Semana 2: Criacao</li>
+            <li>Semana 3: Lancamento</li>
+            <li>Semana 4: Escala</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BONUS SECTION ===== -->
+  <section class="bonus-section">
+    <div class="container">
+      <div class="text-center fade-up">
+        <span class="label-tag">Bonus Exclusivos</span>
+        <h2 class="headline-lg mt-2">Voce Tambem Recebe <span class="text-gold">4 Bonus</span> Que Valem Mais Que o Proprio E-book</h2>
+        <div class="gold-divider"></div>
+      </div>
+
+      <div class="bonus-image-wrapper fade-up">
+        <img src="bonus_mockup_web.jpg" alt="4 Bonus Exclusivos do Metodo IA Renda">
+      </div>
+
+      <div class="bonus-grid fade-up">
+        <div class="bonus-card">
+          <span class="bonus-tag">Bonus 1</span>
+          <h3>50 Prompts Para Lucrar com IA</h3>
+          <p>Prompts testados e otimizados para criacao de produtos, copywriting, conteudo, atendimento e vendas. Copie, cole e lucre.</p>
+          <div class="bonus-value"><s>R$ 47,00</s> &rarr; GRATIS</div>
+        </div>
+        <div class="bonus-card">
+          <span class="bonus-tag">Bonus 2</span>
+          <h3>20 Ideias de Produtos Digitais</h3>
+          <p>Ideias validadas com nicho, publico-alvo, promessa e estrategia de venda. Escolha uma e comece ainda hoje.</p>
+          <div class="bonus-value"><s>R$ 37,00</s> &rarr; GRATIS</div>
+        </div>
+        <div class="bonus-card">
+          <span class="bonus-tag">Bonus 3</span>
+          <h3>Checklist Primeiros R$100 com IA</h3>
+          <p>O caminho mais curto do zero aos seus primeiros R$100. Checklist passo a passo para voce marcar e executar.</p>
+          <div class="bonus-value"><s>R$ 27,00</s> &rarr; GRATIS</div>
+        </div>
+        <div class="bonus-card">
+          <span class="bonus-tag">Bonus 4</span>
+          <h3>Templates de Posts Para Instagram</h3>
+          <p>10 templates de posts + 4 templates de Stories prontos para copiar e adaptar. Economize horas de criacao de conteudo.</p>
+          <div class="bonus-value"><s>R$ 37,00</s> &rarr; GRATIS</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOR WHO ===== -->
+  <section class="forwho-section">
+    <div class="container">
+      <div class="text-center fade-up">
+        <span class="label-tag">Para Quem E</span>
+        <h2 class="headline-lg mt-2">Este E-book E Para Voce?</h2>
+        <div class="gold-divider"></div>
+      </div>
+      <div class="forwho-grid fade-up">
+        <div>
+          <h3 class="headline-md" style="color: #4CAF50; margin-bottom: 20px;">&#10003; SIM, e para voce se:</h3>
+          <ul class="forwho-list forwho-yes">
+            <li><span class="icon">&#10004;&#65039;</span> Quer criar uma renda extra usando a internet</li>
+            <li><span class="icon">&#10004;&#65039;</span> Esta comecando do zero e nao sabe por onde ir</li>
+            <li><span class="icon">&#10004;&#65039;</span> Quer aprender a usar IA para ganhar dinheiro</li>
+            <li><span class="icon">&#10004;&#65039;</span> Tem disposicao para dedicar 1-2 horas por dia</li>
+            <li><span class="icon">&#10004;&#65039;</span> Quer um metodo passo a passo, sem enrolacao</li>
+            <li><span class="icon">&#10004;&#65039;</span> Busca liberdade financeira e flexibilidade</li>
+            <li><span class="icon">&#10004;&#65039;</span> Tem acesso a um celular ou computador com internet</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="headline-md" style="color: #ff4444; margin-bottom: 20px;">&#10007; NAO e para voce se:</h3>
+          <ul class="forwho-list forwho-no">
+            <li><span class="icon">&#10060;</span> Procura esquemas de dinheiro facil ou rapido</li>
+            <li><span class="icon">&#10060;</span> Nao esta disposto a dedicar tempo e esforco</li>
+            <li><span class="icon">&#10060;</span> Espera resultados sem executar nada</li>
+            <li><span class="icon">&#10060;</span> Acredita em "ficar rico da noite pro dia"</li>
+            <li><span class="icon">&#10060;</span> Nao quer aprender coisas novas</li>
+            <li><span class="icon">&#10060;</span> Ja e um expert em marketing digital e IA</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="text-center fade-up">
+        <span class="label-tag">Depoimentos</span>
+        <h2 class="headline-lg mt-2">O Que Nossos Alunos Estao Dizendo</h2>
+        <div class="gold-divider"></div>
+      </div>
+      <div class="testimonial-grid fade-up">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testimonial-text">"Eu nao sabia nada de marketing digital. Segui o passo a passo do Modulo 3, criei meu primeiro e-book com ChatGPT e vendi 14 copias na primeira semana. Ja recuperei o investimento varias vezes!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">RM</div>
+            <div>
+              <div class="testimonial-name">Rafaela M.</div>
+              <div class="testimonial-role">Professora, Belo Horizonte/MG</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testimonial-text">"O plano de 30 dias mudou minha vida. Eu seguia tudo ao pe da letra e no dia 22 fiz minha primeira venda. Hoje ja tenho 3 produtos digitais e uma renda mensal consistente. Recomendo demais!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">LC</div>
+            <div>
+              <div class="testimonial-name">Lucas C.</div>
+              <div class="testimonial-role">Estudante, Recife/PE</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testimonial-text">"Os 50 prompts do bonus sao uma mina de ouro. Uso todos os dias no meu trabalho de freelancer. Minha produtividade triplicou e meus clientes estao impressionados com a qualidade das entregas."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">AP</div>
+            <div>
+              <div class="testimonial-name">Amanda P.</div>
+              <div class="testimonial-role">Freelancer, Curitiba/PR</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRICING SECTION ===== -->
+  <section class="pricing-section" id="comprar">
+    <div class="container">
+      <div class="text-center fade-up">
+        <span class="label-tag">Oferta Especial</span>
+        <h2 class="headline-lg mt-2">Quanto Vale Transformar Sua Vida Financeira?</h2>
+        <div class="gold-divider"></div>
+      </div>
+
+      <!-- VALUE STACK -->
+      <div class="value-stack fade-up">
+        <div class="value-item">
+          <span class="value-item-name">&#128218; E-book Metodo IA Renda (128 pags)</span>
+          <span class="value-item-price">R$ 197,00</span>
+        </div>
+        <div class="value-item">
+          <span class="value-item-name">&#127873; Bonus 1: 50 Prompts Para Lucrar</span>
+          <span class="value-item-price">R$ 47,00</span>
+        </div>
+        <div class="value-item">
+          <span class="value-item-name">&#127873; Bonus 2: 20 Ideias de Produtos</span>
+          <span class="value-item-price">R$ 37,00</span>
+        </div>
+        <div class="value-item">
+          <span class="value-item-name">&#127873; Bonus 3: Checklist R$100</span>
+          <span class="value-item-price">R$ 27,00</span>
+        </div>
+        <div class="value-item">
+          <span class="value-item-name">&#127873; Bonus 4: Templates Instagram</span>
+          <span class="value-item-price">R$ 37,00</span>
+        </div>
+        <div class="value-total">
+          <span class="value-total-label">Valor total:</span>
+          <span class="value-total-price">R$ 345,00</span>
+        </div>
+        <div class="value-pay">
+          <div class="value-pay-label">Hoje voce leva tudo por apenas:</div>
+          <div class="value-pay-price">R$ 37,00</div>
+          <div style="font-size: 0.85rem; color: #8a8fa8; margin-top: 4px;">ou 4x de R$ 10,09 no cartao</div>
+        </div>
+      </div>
+
+      <!-- PRICING CARD -->
+      <div class="pricing-card fade-up">
+        <div class="pricing-badge">OFERTA POR TEMPO LIMITADO</div>
+        <h3 class="headline-md">Metodo IA Renda<br><small style="font-weight: 400; font-size: 0.7em; color: #b0b8d1;">+ Todos os 4 Bonus Exclusivos</small></h3>
+        <div class="pricing-original">De <s>R$ 345,00</s> por apenas</div>
+        <div class="pricing-current">
+          <span class="currency">R$</span>
+          <span class="amount">37</span>
+        </div>
+        <div class="pricing-installment">ou <strong>4x de R$ 10,09</strong> no cartao</div>
+
+        <div class="mt-4">
+          <a href="#" class="cta-btn" style="width: 100%; display: block;">
+            QUERO GARANTIR O MEU AGORA
+            <span class="cta-btn-sub">Acesso imediato &bull; Pagamento seguro via Hotmart</span>
+          </a>
+        </div>
+
+        <ul class="pricing-includes">
+          <li><span class="check">&#10003;</span> E-book completo com 128 paginas (PDF)</li>
+          <li><span class="check">&#10003;</span> 4 bonus exclusivos inclusos</li>
+          <li><span class="check">&#10003;</span> Acesso imediato apos a compra</li>
+          <li><span class="check">&#10003;</span> Leia no celular, tablet ou computador</li>
+          <li><span class="check">&#10003;</span> Atualizacoes gratuitas por 1 ano</li>
+          <li><span class="check">&#10003;</span> Garantia incondicional de 7 dias</li>
+          <li><span class="check">&#10003;</span> Suporte por e-mail</li>
+        </ul>
+
+        <div class="cta-safe mt-3">
+          <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+          Ambiente seguro &bull; Seus dados protegidos &bull; Compra via Hotmart
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GUARANTEE ===== -->
+  <section class="guarantee-section">
+    <div class="container">
+      <div class="text-center fade-up">
+        <span class="label-tag">Risco Zero</span>
+        <h2 class="headline-lg mt-2">Garantia Incondicional de 7 Dias</h2>
+        <div class="gold-divider"></div>
+      </div>
+      <div class="guarantee-grid fade-up">
+        <img src="guarantee_badge_web.jpg" alt="Garantia 7 Dias" class="guarantee-badge-img">
+        <div class="guarantee-text">
+          <h3>Sua satisfacao ou seu dinheiro de volta.</h3>
+          <p>Voce tem <strong>7 dias</strong> para acessar todo o conteudo, aplicar o metodo e decidir se faz sentido para voce. Se por qualquer motivo voce nao ficar satisfeito, basta enviar um e-mail e devolvemos <strong>100% do seu investimento</strong>. Sem perguntas, sem burocracia.</p>
+          <p class="mt-2">O risco e <strong>todo nosso</strong>. Voce nao tem nada a perder e tudo a ganhar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="text-center fade-up">
+        <span class="label-tag">Duvidas Frequentes</span>
+        <h2 class="headline-lg mt-2">Perguntas e Respostas</h2>
+        <div class="gold-divider"></div>
+      </div>
+      <div class="faq-list fade-up">
+        <div class="faq-item">
+          <button class="faq-question">
+            Preciso saber programar ou ter experiencia tecnica?
+            <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Nao! O Metodo IA Renda foi criado especificamente para iniciantes. Voce so precisa saber usar um celular ou computador e ter acesso a internet. Todo o passo a passo e explicado de forma simples e direta.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Funciona no celular?
+            <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Sim! Tanto o e-book quanto as ferramentas de IA indicadas funcionam perfeitamente no celular. Voce pode ler, estudar e executar tudo pelo smartphone.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Preciso investir dinheiro alem do e-book?
+            <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Nao. Todas as ferramentas indicadas no metodo possuem versoes gratuitas. O unico investimento necessario e o valor do e-book. Depois, voce pode escalar investindo em ferramentas pagas, mas nao e obrigatorio para comecar.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Em quanto tempo vou ver resultados?
+            <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Depende da sua dedicacao. O plano de 30 dias foi desenhado para voce ter seu primeiro produto criado e publicado em ate 2 semanas, com possibilidade de primeiras vendas a partir da terceira semana. Alguns alunos conseguem resultados ainda mais rapido.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            O conteudo fica desatualizado?
+            <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>O e-book e atualizado regularmente para acompanhar as mudancas do mercado de IA. Ao comprar, voce recebe atualizacoes gratuitas por 1 ano. Os principios de negocio ensinados sao atemporais.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Como recebo o e-book?
+            <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Imediatamente apos a confirmacao do pagamento, voce recebe o acesso por e-mail com o link para download do PDF. O processo e automatico e instantaneo.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            E se eu nao gostar?
+            <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Voce tem 7 dias de garantia incondicional. Se nao ficar satisfeito por qualquer motivo, basta solicitar o reembolso e devolvemos 100% do seu dinheiro. Sem perguntas.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Posso pagar no boleto ou PIX?
+            <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Sim! Aceitamos cartao de credito (ate 12x), boleto bancario, PIX e outros meios de pagamento. Tudo processado de forma segura pela Hotmart.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FINAL CTA ===== -->
+  <section class="final-cta">
+    <div class="container" style="position: relative; z-index: 2;">
+      <div class="fade-up">
+        <span class="label-tag">Ultima Chance</span>
+        <h2 class="headline-xl mt-3">A Oportunidade Esta na Mesa.<br>A Decisao E <span class="text-gold">Sua</span>.</h2>
+        <p class="subheadline mt-3" style="max-width: 600px; margin-left: auto; margin-right: auto;">Daqui a 90 dias, voce pode estar no mesmo lugar onde esta hoje. Ou pode ter construido uma fonte de renda real usando Inteligencia Artificial. A unica diferenca e a acao que voce toma agora.</p>
+        <div class="mt-5">
+          <a href="#comprar" class="cta-btn" style="font-size: 1.3rem; padding: 22px 56px;">
+            SIM, EU QUERO COMECAR AGORA
+            <span class="cta-btn-sub">Por apenas R$ 37 &bull; Garantia de 7 dias &bull; Acesso imediato</span>
+          </a>
+        </div>
+        <div class="cta-safe mt-3">
+          <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+          Compra 100% segura &bull; Garantia de 7 dias &bull; Pagamento via Hotmart
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <p style="font-family: 'Playfair Display', serif; font-size: 1.1rem; color: #fff; margin-bottom: 12px;">METODO <span class="text-gold">IA RENDA</span></p>
+      <p>&copy; 2026 Metodo IA Renda. Todos os direitos reservados.</p>
+      <p style="margin-top: 8px;">Este produto e comercializado com apoio da Hotmart. A plataforma nao faz controle editorial previo dos produtos aqui comercializados, nem avalia a tecnicidade e experiencia daqueles que os produzem. A existencia de um produto e sua aquisicao, atraves da plataforma, nao podem ser consideradas como garantia de qualidade de conteudo e resultado, em qualquer hipotese. Ao adquiri-lo, o comprador declara estar ciente dessas informacoes. Os termos e politicas da Hotmart podem ser acessados aqui, antes mesmo da conclusao da compra.</p>
+      <p style="margin-top: 12px;">
+        <a href="#" style="color: #666; margin: 0 8px;">Termos de Uso</a> |
+        <a href="#" style="color: #666; margin: 0 8px;">Politica de Privacidade</a> |
+        <a href="#" style="color: #666; margin: 0 8px;">Contato</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    // Floating top bar on scroll
+    const topBar = document.getElementById('topBar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 600) {
+        topBar.classList.add('visible');
+      } else {
+        topBar.classList.remove('visible');
+      }
+    });
+
+    // FAQ Accordion
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const isActive = item.classList.contains('active');
+        // Close all
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+        // Toggle current
+        if (!isActive) item.classList.add('active');
+      });
+    });
+
+    // Scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // Counter animation
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const counters = entry.target.querySelectorAll('.counter-num');
+          counters.forEach(counter => {
+            const target = parseInt(counter.getAttribute('data-target'));
+            const duration = 2000;
+            const step = target / (duration / 16);
+            let current = 0;
+            const timer = setInterval(() => {
+              current += step;
+              if (current >= target) {
+                counter.textContent = target + '+';
+                clearInterval(timer);
+              } else {
+                counter.textContent = Math.floor(current) + '+';
+              }
+            }, 16);
+          });
+          counterObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.counter-row').forEach(el => counterObserver.observe(el));
+
+    // Smooth scroll for CTA buttons
+    document.querySelectorAll('a[href="#comprar"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.getElementById('comprar').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  </script>
+
+</body>
+</html>
